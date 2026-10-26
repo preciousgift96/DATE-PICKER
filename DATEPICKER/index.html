@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic page information -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the page responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO description -->
+    <meta
+        name="description"
+        content="A simple datepicker UI built with HTML and CSS."
+    >
+
+    <title>Datepicker UI</title>
+
+    <!-- Connect CSS file -->
+    <link rel="stylesheet" href="datepicker.css">
+</head>
+
+<body>
+
+    <!-- Main container -->
+    <main class="page-container">
+
+        <!-- Page heading -->
+        <header class="page-header">
+            <p class="eyebrow">UI COMPONENT</p>
+
+            <h1>Datepicker</h1>
+
+            <p>
+                Select a date from the calendar below.
+            </p>
+        </header>
+
+
+        <!-- Datepicker -->
+        <section class="datepicker">
+
+            <!-- Datepicker input -->
+            <div class="date-input">
+
+                <label for="date">
+                    Select Date
+                </label>
+
+                <div class="input-wrapper">
+
+                    <input
+                        type="text"
+                        id="date"
+                        value="September 21, 2026"
+                        readonly
+                    >
+
+                    <!-- Calendar icon -->
+                    <span class="calendar-icon">
+                        📅
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Calendar -->
+            <div class="calendar">
+
+                <!-- Calendar header -->
+                <div class="calendar-header">
+
+                    <!-- Previous month button -->
+                    <button
+                        type="button"
+                        class="month-button"
+                        aria-label="Previous month"
+                    >
+                        ‹
+                    </button>
+
+
+                    <!-- Current month -->
+                    <h2>September 2026</h2>
+
+
+                    <!-- Next month button -->
+                    <button
+                        type="button"
+                        class="month-button"
+                        aria-label="Next month"
+                    >
+                        ›
+                    </button>
+
+                </div>
+
+
+                <!-- Days of the week -->
+                <div class="weekdays">
+
+                    <span>Sun</span>
+                    <span>Mon</span>
+                    <span>Tue</span>
+                    <span>Wed</span>
+                    <span>Thu</span>
+                    <span>Fri</span>
+                    <span>Sat</span>
+
+                </div>
+
+
+                <!-- Calendar dates -->
+                <div class="days">
+
+                    <!-- Previous month dates -->
+                    <button class="day previous">30</button>
+                    <button class="day previous">31</button>
+
+                    <!-- September dates -->
+                    <button class="day">1</button>
+                    <button class="day">2</button>
+                    <button class="day">3</button>
+                    <button class="day">4</button>
+                    <button class="day">5</button>
+
+                    <button class="day">6</button>
+                    <button class="day">7</button>
+                    <button class="day">8</button>
+                    <button class="day">9</button>
+                    <button class="day">10</button>
+                    <button class="day">11</button>
+                    <button class="day">12</button>
+
+                    <button class="day">13</button>
+                    <button class="day">14</button>
+                    <button class="day">15</button>
+                    <button class="day">16</button>
+                    <button class="day">17</button>
+                    <button class="day">18</button>
+                    <button class="day">19</button>
+
+                    <button class="day">20</button>
+
+                    <!-- Selected date -->
+                    <button class="day selected">
+                        21
+                    </button>
+
+                    <button class="day">22</button>
+                    <button class="day">23</button>
+                    <button class="day">24</button>
+                    <button class="day">25</button>
+                    <button class="day">26</button>
+
+                    <button class="day">27</button>
+                    <button class="day">28</button>
+                    <button class="day">29</button>
+                    <button class="day">30</button>
+
+                    <!-- Next month dates -->
+                    <button class="day next">1</button>
+                    <button class="day next">2</button>
+                    <button class="day next">3</button>
+
+                </div>
+
+
+                <!-- Calendar footer -->
+                <div class="calendar-footer">
+
+                    <button class="today-button">
+                        Today
+                    </button>
+
+                    <button class="clear-button">
+                        Clear
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

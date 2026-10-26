@@ -1,0 +1,436 @@
+/* =========================================
+   BASIC RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #f4f6f8;
+
+    color: #1f2937;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+
+/* =========================================
+   MAIN PAGE CONTAINER
+========================================= */
+
+.page-container {
+    width: 100%;
+    max-width: 500px;
+}
+
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.page-header {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.eyebrow {
+    color: #6366f1;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+.page-header h1 {
+    font-size: 36px;
+
+    color: #111827;
+
+    margin-bottom: 10px;
+}
+
+.page-header p:last-child {
+    color: #6b7280;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   DATEPICKER CONTAINER
+========================================= */
+
+.datepicker {
+    background-color: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   DATE INPUT
+========================================= */
+
+.date-input {
+    margin-bottom: 25px;
+}
+
+.date-input label {
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+
+    color: #374151;
+}
+
+
+/* Input wrapper */
+
+.input-wrapper {
+    position: relative;
+}
+
+
+/* Date input */
+
+.input-wrapper input {
+    width: 100%;
+
+    height: 50px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 10px;
+
+    padding: 0 45px 0 15px;
+
+    font-size: 15px;
+
+    color: #374151;
+
+    background-color: #ffffff;
+
+    outline: none;
+}
+
+
+/* Input focus effect */
+
+.input-wrapper input:focus {
+    border-color: #6366f1;
+
+    box-shadow:
+        0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+
+/* Calendar icon */
+
+.calendar-icon {
+    position: absolute;
+
+    right: 15px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    font-size: 18px;
+}
+
+
+/* =========================================
+   CALENDAR
+========================================= */
+
+.calendar {
+    border-top: 1px solid #eeeeee;
+
+    padding-top: 20px;
+}
+
+
+/* =========================================
+   CALENDAR HEADER
+========================================= */
+
+.calendar-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+.calendar-header h2 {
+    font-size: 18px;
+
+    color: #111827;
+}
+
+
+/* Previous / next buttons */
+
+.month-button {
+    width: 36px;
+
+    height: 36px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #f3f4f6;
+
+    color: #374151;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition: 0.2s ease;
+}
+
+
+/* Hover effect */
+
+.month-button:hover {
+    background-color: #e5e7eb;
+}
+
+
+/* =========================================
+   DAYS OF THE WEEK
+========================================= */
+
+.weekdays {
+    display: grid;
+
+    grid-template-columns: repeat(7, 1fr);
+
+    margin-bottom: 10px;
+}
+
+.weekdays span {
+    text-align: center;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    color: #9ca3af;
+}
+
+
+/* =========================================
+   CALENDAR DAYS
+========================================= */
+
+.days {
+    display: grid;
+
+    grid-template-columns: repeat(7, 1fr);
+
+    gap: 5px;
+}
+
+
+/* Individual day */
+
+.day {
+    width: 100%;
+
+    aspect-ratio: 1;
+
+    border: none;
+
+    background-color: transparent;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    color: #374151;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+/* Hover */
+
+.day:hover {
+    background-color: #eef2ff;
+
+    color: #6366f1;
+}
+
+
+/* Previous / next month */
+
+.day.previous,
+.day.next {
+    color: #d1d5db;
+}
+
+
+/* =========================================
+   SELECTED DATE
+========================================= */
+
+.day.selected {
+    background-color: #6366f1;
+
+    color: #ffffff;
+
+    font-weight: bold;
+}
+
+
+/* Selected date hover */
+
+.day.selected:hover {
+    background-color: #4f46e5;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   CALENDAR FOOTER
+========================================= */
+
+.calendar-footer {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-top: 1px solid #eeeeee;
+
+    margin-top: 20px;
+
+    padding-top: 18px;
+}
+
+
+/* Footer buttons */
+
+.today-button,
+.clear-button {
+    border: none;
+
+    background: transparent;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    padding: 8px 12px;
+
+    border-radius: 8px;
+
+    transition: 0.2s ease;
+}
+
+
+/* Today */
+
+.today-button {
+    color: #6366f1;
+}
+
+.today-button:hover {
+    background-color: #eef2ff;
+}
+
+
+/* Clear */
+
+.clear-button {
+    color: #6b7280;
+}
+
+.clear-button:hover {
+    background-color: #f3f4f6;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 25px 15px;
+    }
+
+    .page-header h1 {
+        font-size: 30px;
+    }
+
+    .datepicker {
+        padding: 18px;
+    }
+
+    .calendar-header h2 {
+        font-size: 16px;
+    }
+
+    .day {
+        font-size: 13px;
+    }
+
+    .weekdays span {
+        font-size: 10px;
+    }
+}
